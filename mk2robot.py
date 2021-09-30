@@ -26,24 +26,6 @@ class MK2Robot:
         self._update_transformation_matrices(q0,q1,q2)
         
         # re-escribe self.pose como una lista de 4 matrices nulas
-<<<<<<< HEAD
-        self.pose = np.array([np.zeros((4,4))] * 4) 
-
-        """ 
-        Tu codigo debería verse más o menos así
-        
-        self.pose[0] = producto de matrices lindas
-        self.pose[1] = producto de mas matrices lindas
-        self.pose[2] = producto de otras matrices lindas
-        self.pose[3] = producto de las ultimas matrices lindas
-        """
-        ## ------- ESCRIBE TU CODIGO ACA ----------
-        self.pose[0] = np.matmul(self.R[0],self.T[0]) 
-        self.pose[1] = np.matmul(self.R[1],self.T[1])
-        self.pose[2] = np.matmul(self.R[2],self.T[2])
-        self.pose[3] = np.matmul(self.R[3],self.T[3])
-        ## ------- FIN DE TU CODIGO      ----------        
-=======
         self.pose = [np.zeros((4,4))] * 4 
         
         self.pose[0] = np.linalg.multi_dot([self.T[0], self.R[0], self.T[1]])
@@ -51,7 +33,6 @@ class MK2Robot:
         self.pose[2] = np.linalg.multi_dot([self.pose[1], self.R[2], self.T[3]])
         self.pose[3] = np.linalg.multi_dot([self.pose[2], self.R[3], self.T[4]])
    
->>>>>>> dev
 
     def _update_transformation_matrices(self, q0,q1,q2):
         """
@@ -68,18 +49,10 @@ class MK2Robot:
         self.R = []
 
         
-<<<<<<< HEAD
-        ## ------- REEMPLAZA LOS VALORES CORRECTOS PARA CADA CASO ----------
-        angulo_rotacion_l0 = 90
-        angulo_rotacion_l1 = q0
-        angulo_rotacion_l2 = q1
-        angulo_rotacion_l3 = q2
-=======
         angulo_rotacion_l0 = q0
         angulo_rotacion_l1 = q1
         angulo_rotacion_l2 = -np.pi + q2
         angulo_rotacion_l3 = np.pi/2 - q1 - q2
->>>>>>> dev
 
         # Link 1
         self.T.append(translation_along_zaxis(self.a[0]))

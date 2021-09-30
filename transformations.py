@@ -15,17 +15,8 @@ def rotation_around_zaxis(q):
     return R
 
 def rotation_around_yaxis(q):
-<<<<<<< HEAD
-    R = [np.cos(q), 0, np.sin(q), 0], \
-        [0, 1, 0, 0], \
-        [-np.sin(q), 0, np.cos(q), 0], \
-        [0, 0, 0, 1]
-    return R
-
-=======
     R = [np.cos(q), 0, -np.sin(q), 0], \
         [0, 1, 0, 0], \
         [np.sin(q), 0, np.cos(q), 0], \
         [0, 0, 0, 1]
     return R
->>>>>>> dev

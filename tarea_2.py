@@ -8,11 +8,7 @@ from mk2robot import MK2Robot
 """ 1. Useful functions """
 
 def update(val):
-<<<<<<< HEAD
-    # This function is called any time a slider value changes
-=======
     # This function is called ny time a slider value changes
->>>>>>> dev
     robot.update_pose(q0_slider.val, q1_slider.val, q2_slider.val)
     [X_pos, Y_pos, Z_pos] = robot.get_joint_positions()
     plot_robot(X_pos, Y_pos, Z_pos)

@@ -7,3 +7,15 @@ Felipe:
 Gonzalo:
 Raimundo:
 Rodrigo:
+
+
+
+git clone: clonar
+git status: cachar si hay cambios
+git diff: cachar exactamente cuales son los cambios
+git checkout: cambiar de ramma
+git add: agregar al "stage", es decir, declarar que se hará seguimiento a un archivo
+git commit: grabar los cambios declarados
+git push: subir al remoto
+git branch: crear una rama
+git merge: traer otra rama a la que estoy actualmente

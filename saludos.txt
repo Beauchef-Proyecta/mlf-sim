@@ -1,10 +1,10 @@
-Francisco:
-Valeria: Hola mundo
+Francisco: Hola! ¿Cómo están?
+Valeria:Hola mundo
 Alejandra:
 Camila:
-Esteban:
-Felipe:
-Gonzalo:
+Esteban: Holahola
+Felipe: Hola, que tengan un lindo Jueves!
+Gonzalo: Hola yo estoy muy bien! :)
 Raimundo:
 Rodrigo:
 

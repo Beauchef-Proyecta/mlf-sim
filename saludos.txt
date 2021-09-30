@@ -1,12 +1,12 @@
 Francisco: Hola! ¿Cómo están?
-Valeria:
-Alejandra:
+Valeria:Hola mundo
+Alejandra: Holiholi
 Camila:
 Esteban: Holahola
 Felipe: Hola, que tengan un lindo Jueves!
 Gonzalo: Hola yo estoy muy bien! :)
 Raimundo: uwu
-Rodrigo:
+Rodrigo: Estoy bien!
 
 
 

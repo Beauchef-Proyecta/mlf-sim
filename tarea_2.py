@@ -60,7 +60,7 @@ ax.margins(x=0)
 plt.subplots_adjust(bottom=0.4)
 
 # Make horizontal sliders
-axq0 = plt.axes([0.1, 0.1, 0.8, 0.03], facecolor=axcolor)
+axq0 = plt.axes([0.2, 0.1, (1-0.2)-0.1, 0.03], facecolor=axcolor)
 q0_slider = Slider(
     ax=axq0,
     label='q0 [º]',
@@ -69,7 +69,7 @@ q0_slider = Slider(
     valinit=0,
 )
 
-axq1 = plt.axes([0.1, 0.2, 0.8, 0.03], facecolor=axcolor)
+axq1 = plt.axes([0.2, 0.2, (1-0.2)-0.1, 0.03], facecolor=axcolor)
 q1_slider = Slider(
     ax=axq1,
     label='q1 [º]',
@@ -78,7 +78,7 @@ q1_slider = Slider(
     valinit=0,
 )
 
-axq2 = plt.axes([0.1, 0.3, 0.8, 0.03], facecolor=axcolor)
+axq2 = plt.axes([0.2, 0.3, (1-0.2)-0.1, 0.03], facecolor=axcolor)
 q2_slider = Slider(
     ax=axq2,
     label='q2 [º]',
@@ -91,6 +91,52 @@ q2_slider = Slider(
 q0_slider.on_changed(update)
 q1_slider.on_changed(update)
 q2_slider.on_changed(update)
+
+
+# Create a `matplotlib.widgets.Button` to reset the sliders to initial values.
+q0_rightax = plt.axes([0.01, 0.1, 0.04, 0.03])
+q0_right_button = Button(q0_rightax, '<-', color='1')
+
+q0_leftax = plt.axes([0.06, 0.1, 0.04, 0.03])
+q0_left_button = Button(q0_leftax, '->', color='1')
+
+q1_rightax = plt.axes([0.01, 0.2, 0.04, 0.03])
+q1_right_button = Button(q1_rightax, '<-', color='1')
+
+q1_leftax = plt.axes([0.06, 0.2, 0.04, 0.03])
+q1_left_button = Button(q1_leftax, '->', color='1')
+
+q2_rightax = plt.axes([0.01, 0.3, 0.04, 0.03])
+q2_right_button = Button(q2_rightax, '<-', color='1')
+
+q2_leftax = plt.axes([0.06, 0.3, 0.04, 0.03])
+q2_left_button = Button(q2_leftax, '->', color='1')
+
+
+def right_q0(event):
+    q0_slider.set_val(max(q0_slider.val - 1, q0_slider.valmin))
+
+def left_q0(event):
+    q0_slider.set_val(min(q0_slider.val + 1, q0_slider.valmax))
+
+def right_q1(event):
+    q1_slider.set_val(max(q1_slider.val - 1, q1_slider.valmin))
+
+def left_q1(event):
+    q1_slider.set_val(min(q1_slider.val + 1, q1_slider.valmax))
+
+def right_q2(event):
+    q2_slider.set_val(max(q2_slider.val - 1, q2_slider.valmin))
+
+def left_q2(event):
+    q2_slider.set_val(min(q2_slider.val + 1, q2_slider.valmax))
+
+q0_right_button.on_clicked(right_q0)
+q0_left_button.on_clicked(left_q0)
+q1_right_button.on_clicked(right_q1)
+q1_left_button.on_clicked(left_q1)
+q2_right_button.on_clicked(right_q2)
+q2_left_button.on_clicked(left_q2)
 
 # Now we are ready to go
 plt.show()

@@ -7,7 +7,7 @@ Felipe: Hola, que tengan un lindo Jueves!
 Gonzalo: Hola yo estoy muy bien! :)
 Raimundo: uwu
 Rodrigo: Estoy bien!
-
+Consuelo: veri gud veri güel
 
 
 git clone: clonar

@@ -23,6 +23,9 @@ root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
 
 
+""" 1. Useful functions """
+
+
 def update(val):
     # This function is called ny time a slider value changes
     robot.update_pose(q0_slider.val, q1_slider.val, q2_slider.val)
@@ -156,7 +159,6 @@ right_img = ImageTk.PhotoImage(right_img)
 left_q0_btn = RepeatButton(
     mainframe,
     image=left_img,
-    text="<-",
     command=left_q0,
     repeatinterval=100,
     repeatdelay=10

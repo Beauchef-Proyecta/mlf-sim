@@ -8,7 +8,7 @@ Gonzalo: Hola yo estoy muy bien! :)
 Raimundo: uwu
 Rodrigo: Estoy bien!
 Consuelo: veri gud veri güel
-
+Leslie: Holiiiiis!
 
 git clone: clonar
 git status: cachar si hay cambios
